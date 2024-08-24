@@ -9,7 +9,7 @@ export const restaurants = pgTable("restaurants", {
 {
   onDelete: 'set null'
 }),
-  description: text("phone"),
+  description: text("description"),
   createdAt: timestamp("created_at").notNull().defaultNow(),
   updatedAt: timestamp("updated_at").notNull().defaultNow(),
 });
