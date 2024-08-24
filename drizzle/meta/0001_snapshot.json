@@ -1,6 +1,6 @@
 {
-  "id": "442c62cf-202f-4910-a068-0ec7afba2bbd",
-  "prevId": "a346bc75-310b-4161-9c69-218dc1f11985",
+  "id": "83876f27-8c99-4191-a34a-08651f288d51",
+  "prevId": "277b1a1d-25fc-4575-9b7e-7efc84fab8bb",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -84,8 +84,14 @@
           "primaryKey": false,
           "notNull": true
         },
-        "phone": {
-          "name": "phone",
+        "manager_id": {
+          "name": "manager_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "descriptions": {
+          "name": "descriptions",
           "type": "text",
           "primaryKey": false,
           "notNull": false
@@ -106,7 +112,21 @@
         }
       },
       "indexes": {},
-      "foreignKeys": {},
+      "foreignKeys": {
+        "restaurants_manager_id_users_id_fk": {
+          "name": "restaurants_manager_id_users_id_fk",
+          "tableFrom": "restaurants",
+          "tableTo": "users",
+          "columnsFrom": [
+            "manager_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "set null",
+          "onUpdate": "no action"
+        }
+      },
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}
     }

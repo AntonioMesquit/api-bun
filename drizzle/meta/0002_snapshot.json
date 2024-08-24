@@ -1,6 +1,6 @@
 {
-  "id": "638746e3-b21c-445d-a2b5-9f1f221079cf",
-  "prevId": "442c62cf-202f-4910-a068-0ec7afba2bbd",
+  "id": "4d1f58c9-9069-46f3-a8cd-3f9c37a90dd5",
+  "prevId": "83876f27-8c99-4191-a34a-08651f288d51",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -90,8 +90,8 @@
           "primaryKey": false,
           "notNull": false
         },
-        "phone": {
-          "name": "phone",
+        "description": {
+          "name": "description",
           "type": "text",
           "primaryKey": false,
           "notNull": false
@@ -123,7 +123,7 @@
           "columnsTo": [
             "id"
           ],
-          "onDelete": "no action",
+          "onDelete": "set null",
           "onUpdate": "no action"
         }
       },
